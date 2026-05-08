@@ -356,6 +356,13 @@ a {
 .works-grid-4 .work-title {
   font-size: 1.15rem;
 }
+#works .works-grid .work-meta {
+  font-size: 0.9rem;
+}
+
+#works .works-grid .work-title {
+  font-size: 1.15rem;
+}
 .works-grid .work-card .work-thumb {
   border-radius: 6px;
     overflow: hidden;
@@ -457,8 +464,8 @@ a {
 .colors-detail-row {
   width: 100%;
   display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  gap: 32px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   align-items: start;
 }
 

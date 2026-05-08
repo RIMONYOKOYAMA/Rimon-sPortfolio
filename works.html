@@ -9,13 +9,6 @@
 <body class="works-page">
   <div id="site-header"></div>
 <main class="wrapper">
-<div class="works-filter works-filter-page">
-  <span data-filter="all">すべて</span>
-  <span data-filter="game">ゲーム</span>
-  <span data-filter="illust">イラスト</span>
-  <span data-filter="ui">UI</span>
-  <span data-filter="other">その他</span>
-</div>
   <section class="section" id="works-list">
 
     <div class="panel works-panel all-works-panel">
@@ -84,52 +77,12 @@
           <div class="work-title">ロゴデザイン集</div>
         </a>
 
-        <a href="works/Diner.html" class="work-card" data-category="illust">
+        <a href="works/illust.html" class="work-card" data-category="illust">
           <div class="work-thumb">
-            <img src="assets/DinnerIcon.jpg" alt="">
+            <img src="assets/IllustIcon.png" alt="">
           </div>
           <div class="work-meta">イラスト / 2025</div>
-          <div class="work-title">ダイナー</div>
-        </a>
-
-        <a href="works/GaoBaoXiaoChiDian.html" class="work-card" data-category="illust">
-          <div class="work-thumb">
-            <img src="assets/ChinaIcon.jpg" alt="">
-          </div>
-          <div class="work-meta">イラスト / 2025</div>
-          <div class="work-title">高包小吃店</div>
-        </a>
-
-        <a href="works/MoonPalace.html" class="work-card" data-category="illust">
-          <div class="work-thumb">
-            <img src="assets/MoonPalaceIcon.jpg" alt="">
-          </div>
-          <div class="work-meta">イラスト / 2025</div>
-          <div class="work-title">ムーンパレス</div>
-        </a>
-
-        <a href="works/NonPhilosophicalZombie.html" class="work-card" data-category="illust">
-          <div class="work-thumb">
-            <img src="assets/ZombieIcon.jpg" alt="">
-          </div>
-          <div class="work-meta">イラスト / 2025</div>
-          <div class="work-title">非哲学的ゾンビ</div>
-        </a>
-
-        <a href="works/GozMez.html" class="work-card" data-category="illust">
-          <div class="work-thumb">
-            <img src="assets/GozMezIcon.jpg" alt="">
-          </div>
-          <div class="work-meta">イラスト / 2026</div>
-          <div class="work-title">ゴズメズ</div>
-        </a>
-
-        <a href="works/TaishoRoman.html" class="work-card" data-category="illust">
-          <div class="work-thumb">
-            <img src="assets/TaishoRomanIcon.jpg" alt="">
-          </div>
-          <div class="work-meta">イラスト / 2025</div>
-          <div class="work-title">大正ロマン</div>
+          <div class="work-title">イラスト集</div>
         </a>
 
         <a href="works/AppakuMensetsu.html" class="work-card" data-category="game">
@@ -152,36 +105,6 @@
   </section>
 </main>
 <script src="load-header.js"></script>
-<script>
-  const filters = document.querySelectorAll('[data-filter]');
-  const cards = document.querySelectorAll('[data-category]');
-
-  // カウントを表示
-  filters.forEach(btn => {
-    const target = btn.dataset.filter;
-
-    if (target === 'all') {
-      btn.textContent += `(${cards.length})`;
-    } else {
-      const count = [...cards].filter(c => c.dataset.category === target).length;
-      btn.textContent += `(${count})`;
-    }
-
-    // クリックのイベント
-    btn.addEventListener('click', () => {
-      filters.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      cards.forEach(card => {
-        if (target === 'all' || card.dataset.category === target) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
 <script src="icon-grid.js"></script>
 <script src="scroll-fade.js"></script>
 </body>
