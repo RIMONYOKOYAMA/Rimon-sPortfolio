@@ -4,27 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ARROW WORLD</title>
-  <link rel="stylesheet" href="../style.css?v=arrowworld-panel-20260428">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body class="works-page arrowworld-page">
   <div id="site-header"></div>
   <main class="wrapper">
-    <section class="work-hero work-hero--background-video">
-      <iframe
-        src="https://www.youtube.com/embed/kDMnykkxPg4?autoplay=1&mute=1&loop=1&playlist=kDMnykkxPg4&controls=0&showinfo=0&disablekb=1&modestbranding=1&rel=0"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-        class="work-hero-video">
-      </iframe>
-      <img src="../assets/ArrowWorldLogo.png" alt="ARROW WORLD" class="work-hero-logo">
-    </section>
-    <div class="colors-content arrowworld-content">
-      <img src="../assets/ArrowWorld1.png" alt="ArrowWorld1" class="ArrowWorld-img">
-      <div class="arrowworld-section-panel">作品概要</div>
-      <img src="../assets/ArrowWorld2.png" alt="ArrowWorld1" class="ArrowWorld-img">
-      <div class="arrowworld-section-panel">デザイン</div>
-      <img src="../assets/ArrowWorld3.png" alt="ArrowWorld1" class="ArrowWorld-img">
+    <div class="colors-detail arrowworld-detail">
+      <section class="colors-detail-hero">
+        <img src="../assets/ArrowWorldLogo.png" alt="ARROW WORLD" class="colors-detail-logo arrowworld-detail-logo">
+        <iframe
+          src="https://www.youtube.com/embed/kDMnykkxPg4?controls=1&modestbranding=1&rel=0"
+          title="ARROW WORLD ゲームプレイ動画"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          class="colors-detail-video">
+        </iframe>
+        <div class="colors-detail-meta">
+          <span>グループ制作：グラフィック全般担当</span>
+          <span>制作時期：2025.5~</span>
+        </div>
+      </section>
+
+      <section class="colors-detail-section colors-detail-section--image-wide">
+        <div class="colors-detail-label arrowworld-detail-label">コンセプト</div>
+        <h1 class="colors-detail-heading">動く段ボールを導くリアルタイム2Dパズル</h1>
+        <img src="../assets/AWIngame1.png" alt="AWのインゲーム画像1" class="AW-Ingame-image1">
+        <div class="arrowworld-thumb-grid">
+        <img src="../assets/AWIngame2.png" alt="AWのインゲーム画像2" class="AW-Ingame-image2">
+        <img src="../assets/AWIngame3.png" alt="AWのインゲーム画像3" class="AW-Ingame-image3">
+        <img src="../assets/AWIngame4.png" alt="AWのインゲーム画像4" class="AW-Ingame-image4">
+        <img src="../assets/AWIngame5.jpg" alt="AWのインゲーム画像5" class="AW-Ingame-image5">
+        </div>
+        <div class="colors-detail-text">
+          <p>自動で動くキャラクターを操作してゴールへと導くリアルタイム2Dパズルゲームです。</p>
+          <p><a href="https://store.steampowered.com/app/3872770/ARROW_WORLD/" target="_blank" rel="noopener noreferrer">https://store.steampowered.com/app/3872770/ARROW_WORLD/</a></p>
+        </div>
+      </section>
+
+      <section class="colors-detail-section colors-detail-section--stack">
+        <div class="colors-detail-label arrowworld-detail-label">デザイン</div>
+        <h2 class="colors-detail-title">実装含めデザインを全て担当</h2>
+        <img src="../assets/AWassets.png" alt="AWのアセット画像" class="AW-detail-image">
+        <div class="colors-detail-text">
+          <p>モチーフが倉庫なため、地味な画にならないよう、カラーに気を使って組み立てています。UIやキャラクター、アセットをはじめリリースのお知らせイラストなども制作しました。</p>
+        </div>
+      </section>
+
+      <section class="colors-detail-section colors-detail-section--stack">
+        <img src="../assets/AWChara.png" alt="AWのキャラ画像" class="AW-Chara-image">
+        <div class="colors-detail-text">
+          <p>キャラクターはダンボールをモチーフにしたものとし、可愛さがありつつ内容や動かしやすさを担保してアニメーションで個性を表現できるように設計しました。</p>
+        </div>
+      </section>
+
+      <section class="colors-detail-section colors-detail-section--stack">
+        <div class="arrowworld-ui-grid">
+          <video autoplay muted loop playsinline class="arrowworld-ui-video arrowworld-placeholder--ui-main" aria-label="UI動画1">
+            <source src="../assets/AWSSUI.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline class="arrowworld-ui-video arrowworld-placeholder--ui-main" aria-label="UI動画2">
+            <source src="../assets/AWClearUI.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline class="arrowworld-ui-video arrowworld-placeholder--ui-sub" aria-label="UI動画3">
+            <source src="../assets/AWTitleUI.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline class="arrowworld-ui-video arrowworld-placeholder--ui-sub" aria-label="UI動画4">
+            <source src="../assets/AWPauseUI.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline class="arrowworld-ui-video arrowworld-placeholder--ui-sub" aria-label="UI動画5">
+            <source src="../assets/AWFallUI.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="colors-detail-text">
+          <p>UIはキャラクター同様、デザインでものはシンプルでゲームの邪魔にならない綺麗さでデザインし、その分アニメーションをポップにすることでゲームとしての楽しさを確保しています。</p>
+        </div>
+      </section>
     </div>
   </main>
   <script src="../load-header.js"></script>

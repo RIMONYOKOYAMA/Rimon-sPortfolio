@@ -78,6 +78,89 @@ body.arrowworld-page {
   background: #f5b336;
 }
 
+body.arrowworld-page .colors-detail {
+  --colors-content-width: 880px;
+}
+
+.arrowworld-detail {
+  padding-top: 44px;
+}
+
+.arrowworld-detail-logo {
+  width: min(420px, 78%);
+}
+
+.arrowworld-detail-label {
+  background: #000;
+  color: #f5b336;
+}
+
+.arrowworld-placeholder {
+  width: 100%;
+  border: var(--border-inner) solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.28) 25%, transparent 25%) 0 0 / 28px 28px,
+    linear-gradient(135deg, transparent 75%, rgba(0, 0, 0, 0.12) 75%) 0 0 / 28px 28px,
+    #e4a039;
+  display: block;
+}
+
+.arrowworld-placeholder--hero,
+.arrowworld-placeholder--game {
+  aspect-ratio: 16 / 9;
+}
+
+.arrowworld-placeholder--asset {
+  aspect-ratio: 16 / 10;
+}
+
+.arrowworld-thumb-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.arrowworld-placeholder--thumb {
+  aspect-ratio: 16 / 9;
+}
+
+.arrowworld-ui-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.arrowworld-ui-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.arrowworld-placeholder--ui-main {
+  grid-column: span 3;
+}
+
+.arrowworld-placeholder--ui-sub {
+  grid-column: span 2;
+}
+
+body.arrowworld-page .colors-detail-text a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-thickness 0.2s ease, text-underline-offset 0.2s ease;
+}
+
+body.arrowworld-page .colors-detail-text a:hover,
+body.arrowworld-page .colors-detail-text a:focus-visible {
+  color: #fff;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
 body.pieceofworld-page {
   background: #5756d5;
 }
@@ -857,8 +940,15 @@ a {
       .colors-detail-row,
       .colors-detail-image-grid,
       .colors-detail-video-grid,
-      .colors-detail-section--design-ui {
+      .colors-detail-section--design-ui,
+      .arrowworld-thumb-grid,
+      .arrowworld-ui-grid {
         grid-template-columns: 1fr;
+      }
+
+      .arrowworld-placeholder--ui-main,
+      .arrowworld-placeholder--ui-sub {
+        grid-column: auto;
       }
     }
 
