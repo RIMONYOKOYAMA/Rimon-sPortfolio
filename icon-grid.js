@@ -1,10 +1,11 @@
+const ICON_BASE = new URL('assets/', document.currentScript.src).href;
 const ICONS = [
-  'assets/icon1.png',
-  'assets/icon2.png',
-  'assets/icon3.png',
-  'assets/icon4.png',
-  'assets/icon5.png',
-  'assets/icon6.png',
+  `${ICON_BASE}icon1.png`,
+  `${ICON_BASE}icon2.png`,
+  `${ICON_BASE}icon3.png`,
+  `${ICON_BASE}icon4.png`,
+  `${ICON_BASE}icon5.png`,
+  `${ICON_BASE}icon6.png`,
 ];
 
 const ICON_SIZE = 40;
@@ -40,7 +41,7 @@ function createGrid() {
         left: ${col * GAP + offset}px;
         top: ${row * GAP}px;
         pointer-events: none;
-        z-index: -1;
+        z-index: 0;
         opacity: 0.2;
         transform: rotate(${startAngle}deg);
       `;

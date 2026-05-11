@@ -169,6 +169,18 @@ body.demonsdinner-page {
   background: #71347f;
 }
 
+body.dessin-page {
+  background: #fff;
+}
+
+body.illust-page {
+  background: #fff;
+}
+
+body.appaku-page {
+  background: #62b5d3;
+}
+
 body.arrowworld-page .arrowworld-section-panel,
 .work-section-panel {
   align-self: center;
@@ -484,6 +496,8 @@ a {
   padding: 42px 0 96px;
   display: grid;
   gap: 64px;
+  position: relative;
+  z-index: 1;
 }
 
 .colors-detail-hero,
@@ -599,6 +613,74 @@ a {
 }
 
 .work-detail-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dessin-detail {
+  --colors-content-width: 980px;
+}
+
+.dessin-gallery {
+  width: 100%;
+  display: grid;
+  gap: 12px;
+}
+
+.dessin-gallery-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
+.dessin-gallery-column {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.dessin-gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.illust-detail {
+  --colors-content-width: 980px;
+}
+
+.illust-gallery {
+  width: 100%;
+  display: grid;
+  gap: 12px;
+}
+
+.illust-gallery-row {
+  display: grid;
+  gap: 12px;
+  align-items: start;
+}
+
+.illust-gallery-row--top {
+  grid-template-columns: 1.064fr 1fr;
+}
+
+.illust-gallery-row--duo {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.illust-gallery-row--feature {
+  grid-template-columns: 2fr 0.92fr;
+  align-items: center;
+}
+
+.illust-gallery-row--trio {
+  grid-template-columns: 0.707fr 0.75fr 0.707fr;
+}
+
+.illust-gallery-image {
   width: 100%;
   height: auto;
   display: block;
@@ -904,6 +986,37 @@ a {
   20%  { transform: translateY(50px); }
   100% { transform: translateY(-100%); }
 }
+
+.page-top-button {
+  position: fixed;
+  right: clamp(16px, 3vw, 36px);
+  bottom: clamp(16px, 3vw, 36px);
+  width: clamp(82px, 8.6vw, 124px);
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  z-index: 120;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.page-top-button:hover,
+.page-top-button:focus-visible {
+  transform: translateY(-4px);
+}
+
+.page-top-button:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 4px;
+}
+
+.page-top-button img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
     
 
     @media (max-width: 900px) {
@@ -949,6 +1062,17 @@ a {
       .arrowworld-placeholder--ui-main,
       .arrowworld-placeholder--ui-sub {
         grid-column: auto;
+      }
+
+      .dessin-gallery-row {
+        grid-template-columns: 1fr;
+      }
+
+      .illust-gallery-row--top,
+      .illust-gallery-row--feature,
+      .illust-gallery-row--duo,
+      .illust-gallery-row--trio {
+        grid-template-columns: 1fr;
       }
     }
 

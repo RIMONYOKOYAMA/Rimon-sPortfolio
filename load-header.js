@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const headerTarget = document.getElementById("site-header");
   if (!headerTarget) return;
+  const isInSubfolder = location.pathname.includes('/works/');
+  const prefix = isInSubfolder ? '../' : '';
   try {
-    const isInSubfolder = location.pathname.includes('/works/');
-    const prefix = isInSubfolder ? '../' : '';
     const response = await fetch(prefix + 'header.html');
     const html = await response.text();
     headerTarget.innerHTML = html;
@@ -28,5 +28,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   } catch (error) {
     console.error("ヘッダーの読み込みに失敗しました", error);
+  }
+
+  if (!document.querySelector(".page-top-button")) {
+    const pageTopButton = document.createElement("button");
+    pageTopButton.type = "button";
+    pageTopButton.className = "page-top-button";
+    pageTopButton.setAttribute("aria-label", "ページの先頭へ戻る");
+    pageTopButton.innerHTML = `<img src="${prefix}assets/PageTopButton.svg" alt="">`;
+    pageTopButton.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    document.body.appendChild(pageTopButton);
   }
 });

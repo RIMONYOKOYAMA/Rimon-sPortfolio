@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="ページの先頭へ戻る">
+  <circle cx="320" cy="320" r="300" fill="#feec01"/>
+  <circle
+    cx="320"
+    cy="320"
+    r="300"
+    fill="none"
+    stroke="#000"
+    stroke-width="20"
+    stroke-linecap="butt"
+    stroke-dasharray="80 72"
+    transform="rotate(-83 320 320)"
+  />
+  <path
+    d="M320 392V255M260 315L320 249L380 315"
+    fill="none"
+    stroke="#000"
+    stroke-width="40"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
