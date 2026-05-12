@@ -6,8 +6,185 @@
   <title>ロゴデザイン集</title>
   <link rel="stylesheet" href="../style.css">
 </head>
-<body class="works-page">
+<body class="works-page logo-collection-page">
   <div id="site-header"></div>
+  <main class="logo-collection">
+    <section class="logo-showcase" aria-label="ロゴスライダー">
+      <button class="logo-slider-button logo-slider-button--prev" type="button" aria-label="前のロゴへ"></button>
+      <div class="logo-feature" aria-live="polite">
+        <img src="../assets/Logo1.png" alt="Logo 01" class="logo-feature-img">
+        <div class="logo-feature-placeholder" hidden></div>
+      </div>
+      <button class="logo-slider-button logo-slider-button--next" type="button" aria-label="次のロゴへ"></button>
+    </section>
+
+    <section class="logo-grid" aria-label="ロゴ一覧">
+      <button class="logo-grid-item is-active" type="button" data-logo-label="Logo 01">
+        <img src="../assets/Logo1.png" alt="Logo 01">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 02">
+        <img src="../assets/Logo2.png" alt="Logo 02">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 03">
+        <img src="../assets/Logo3.png" alt="Logo 03">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 04">
+        <img src="../assets/Logo4.png" alt="Logo 04">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 05">
+        <img src="../assets/Logo5.png" alt="Logo 05">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 06">
+        <img src="../assets/Logo6.png" alt="Logo 06">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 07">
+        <img src="../assets/Logo7.png" alt="Logo 07">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 08">
+        <img src="../assets/Logo8.png" alt="Logo 08">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 09">
+        <img src="../assets/Logo9.png" alt="Logo 09">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 10">
+        <img src="../assets/Logo10.png" alt="Logo 10">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 11">
+        <img src="../assets/Logo11.png" alt="Logo 11">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 12">
+        <img src="../assets/Logo12.png" alt="Logo 12">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 13">
+        <img src="../assets/Logo13.png" alt="Logo 13">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 14">
+        <img src="../assets/Logo14.png" alt="Logo 14">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 15">
+        <img src="../assets/Logo15.png" alt="Logo 15">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 16">
+        <img src="../assets/Logo16.png" alt="Logo 16">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 17">
+        <img src="../assets/Logo17.png" alt="Logo 17">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 18">
+        <img src="../assets/Logo18.png" alt="Logo 18">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 19">
+        <img src="../assets/Logo19.png" alt="Logo 19">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 20">
+        <img src="../assets/Logo20.png" alt="Logo 20">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 21">
+        <img src="../assets/Logo21.png" alt="Logo 21">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 22">
+        <img src="../assets/Logo22.png" alt="Logo 22">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 23">
+        <img src="../assets/Logo23.png" alt="Logo 23">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 24">
+        <img src="../assets/Logo24.png" alt="Logo 24">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 25">
+        <img src="../assets/Logo25.png" alt="Logo 25">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 26">
+        <img src="../assets/Logo26.png" alt="Logo 26">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 27">
+        <img src="../assets/Logo27.png" alt="Logo 27">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 28">
+        <img src="../assets/Logo28.png" alt="Logo 28">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 29">
+        <img src="../assets/Logo29.png" alt="Logo 29">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 30">
+        <img src="../assets/Logo30.png" alt="Logo 30">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 31">
+        <img src="../assets/Logo31.png" alt="Logo 31">
+      </button>
+      <button class="logo-grid-item" type="button" data-logo-label="Logo 32">
+        <img src="../assets/Logo32.png" alt="Logo 32">
+      </button>
+    </section>
+  </main>
   <script src="../load-header.js"></script>
+  <script>
+    (() => {
+      const items = [...document.querySelectorAll(".logo-grid-item")];
+      const feature = document.querySelector(".logo-feature");
+      const featureImg = document.querySelector(".logo-feature-img");
+      const featurePlaceholder = document.querySelector(".logo-feature-placeholder");
+      const prevButton = document.querySelector(".logo-slider-button--prev");
+      const nextButton = document.querySelector(".logo-slider-button--next");
+      let activeIndex = 0;
+      let timerId;
+
+      const getItemImage = (item) => item.querySelector("img");
+
+      const showLogo = (index) => {
+        activeIndex = (index + items.length) % items.length;
+        const item = items[activeIndex];
+        const img = getItemImage(item);
+        const label = item.dataset.logoLabel || img?.alt || `Logo ${activeIndex + 1}`;
+
+        items.forEach((gridItem, itemIndex) => {
+          gridItem.classList.toggle("is-active", itemIndex === activeIndex);
+        });
+
+        feature.classList.remove("is-changing");
+        requestAnimationFrame(() => {
+          feature.classList.add("is-changing");
+        });
+
+        if (img?.getAttribute("src")) {
+          featureImg.src = img.getAttribute("src");
+          featureImg.alt = img.alt || label;
+          featureImg.hidden = false;
+          featurePlaceholder.hidden = true;
+        } else {
+          featureImg.removeAttribute("src");
+          featureImg.alt = "";
+          featureImg.hidden = true;
+          featurePlaceholder.textContent = label;
+          featurePlaceholder.hidden = false;
+        }
+      };
+
+      const restartAutoSlide = () => {
+        window.clearInterval(timerId);
+        timerId = window.setInterval(() => showLogo(activeIndex + 1), 4200);
+      };
+
+      prevButton.addEventListener("click", () => {
+        showLogo(activeIndex - 1);
+        restartAutoSlide();
+      });
+
+      nextButton.addEventListener("click", () => {
+        showLogo(activeIndex + 1);
+        restartAutoSlide();
+      });
+
+      items.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          showLogo(index);
+          restartAutoSlide();
+        });
+      });
+
+      showLogo(0);
+      restartAutoSlide();
+    })();
+  </script>
 </body>
 </html>
