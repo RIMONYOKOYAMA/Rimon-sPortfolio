@@ -8,25 +8,51 @@
 </head>
 <body class="works-page demonsdinner-page">
   <div id="site-header"></div>
-  <main class="wrapper">
-    <section class="work-hero work-hero--background-video">
-      <iframe
-        src="https://www.youtube.com/embed/VIDEO_ID_DD?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID_DD&controls=0&showinfo=0&disablekb=1&modestbranding=1&rel=0"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-        class="work-hero-video">
-      </iframe>
+  <main class="demonsdinner-detail">
+    <section class="dd-hero" aria-label="デモンズダイナー メインビジュアル">
+      <img src="../assets/DDMainvisual.png" alt="">
     </section>
-    <div class="colors-content">
-      <img src="../assets/DemonsDinner1.png" alt="Demons Dinner 1" class="work-detail-img">
-      <div class="work-section-panel">ゲームシステム</div>
-      <img src="../assets/DemonsDinner2.png" alt="Demons Dinner 2" class="work-detail-img">
-      <div class="work-section-panel">作品概要</div>
-      <img src="../assets/DemonsDinner3.png" alt="Demons Dinner 3" class="work-detail-img">
-      <div class="work-section-panel">使用素材</div>
-      <img src="../assets/DemonsDinner4.png" alt="Demons Dinner 4" class="work-detail-img">
-    </div>
+
+    <section class="dd-section dd-section--movie" aria-labelledby="dd-movie-title">
+      <div class="dd-video-slot">
+        <!-- YouTube URL is added to this iframe src later. -->
+        <iframe
+          title="デモンズダイナー ゲームプレイ動画"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="dd-video-label" id="dd-movie-title">ゲームプレイ動画</div>
+      </div>
+      <p class="dd-meta">個人制作 / 制作時期：2025.12~ / 制作時間：100h</p>
+    </section>
+
+    <section class="dd-section" aria-labelledby="dd-concept-title">
+      <div class="dd-label">コンセプト</div>
+      <h1 class="dd-heading" id="dd-concept-title">未知の食材でレシピを開発する<br>魔界レストラン経営シミュレーション</h1>
+      <img src="../assets/DDConceptImage.png" alt="">
+    </section>
+
+    <section class="dd-section dd-section--flow" aria-labelledby="dd-flow-title">
+      <div class="dd-label dd-label--small">システム</div>
+      <div class="dd-flow-layout">
+        <div class="dd-flow-copy">
+          <h2 class="dd-title" id="dd-flow-title">料理2Dローグライト</h2>
+          <img src="../assets/DDSystemImage.png" alt="">
+          <div class="dd-text">
+            <h3>料理は「探索」</h3>
+            <p>未知の食材を集め、組み合わせを試しながらメニューを開発していくゲームです。設備の強化やレストラン経営を通じて、探索と開発のサイクルを広げていきます。</p>
+          </div>
+        </div>
+        <img class="dd-game-screen" src="../assets/DDGameScreen.png" alt="">
+      </div>
+    </section>
+
+    <section class="dd-section" aria-labelledby="dd-design-title">
+      <div class="dd-label">デザイン</div>
+      <div class="dd-assets-layout">
+        <img src="../assets/DDDesign.png" alt="">
+      </div>
+    </section>
   </main>
   <script src="../load-header.js"></script>
 </body>

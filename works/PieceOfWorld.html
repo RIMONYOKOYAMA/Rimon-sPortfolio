@@ -3,28 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piece Of World</title>
+  <title>Piece of Worlds</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body class="works-page pieceofworld-page">
   <div id="site-header"></div>
-  <main class="wrapper">
-    <section class="work-hero work-hero--background-video">
-      <iframe
-        src="https://www.youtube.com/embed/VIDEO_ID_POW?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID_POW&controls=0&showinfo=0&disablekb=1&modestbranding=1&rel=0"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-        class="work-hero-video">
-      </iframe>
+  <main class="pieceofworld-detail">
+    <section class="pow-hero" aria-label="Piece of Worlds メインビジュアル">
+      <img src="../assets/POWMainBisual.png" alt="" class="pow-hero-image">
     </section>
-    <div class="colors-content">
-      <img src="../assets/PieceofWorlds1.png" alt="Piece Of World 1" class="work-detail-img">
-      <div class="work-section-panel">作品概要</div>
-      <img src="../assets/PieceofWorlds2.png" alt="Piece Of World 2" class="work-detail-img">
-      <div class="work-section-panel">デザイン</div>
-      <img src="../assets/PieceofWorlds3.png" alt="Piece Of World 3" class="work-detail-img">
-    </div>
+
+    <section class="pow-section pow-section--movie" aria-labelledby="pow-movie-title">
+      <div class="pow-video-slot">
+        <!-- YouTube URL is added to this iframe src later. -->
+        <iframe
+          title="Piece of Worlds ゲームプレイ動画"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <div class="pow-video-label" id="pow-movie-title">ゲームプレイ動画</div>
+      </div>
+      <p class="pow-meta">グループ制作：グラフィック全般担当　制作時期：2025.5~</p>
+    </section>
+
+    <section class="pow-section" aria-labelledby="pow-concept-title">
+      <div class="pow-label">コンセプト</div>
+      <h1 class="pow-heading" id="pow-concept-title">ピースをつけて外して先へ進む<br>倉庫番パズルゲーム</h1>
+      <img src="../assets/POWIngame.png" alt="" class="pow-image pow-image--ingame">
+    </section>
+
+    <section class="pow-section" aria-labelledby="pow-design-title">
+      <div class="pow-label">デザイン</div>
+      <h2 class="pow-heading" id="pow-design-title">無彩色で目立たせる</h2>
+      <div class="pow-design-grid">
+        <img src="../assets/POWChara.png" alt="" class="pow-image pow-image--character">
+      </div>
+      <div class="pow-text">
+        <p>不思議で可愛い感じをベースに、モチーフに寄りすぎないデザインで進めました。カラーに関して、全体のデザインを考えた時に、差し色がブルーの方がかえって目立つと考え、このデザインに決定しました。</p>
+      </div>
+    </section>
+
+    <section class="pow-section pow-section--assets" aria-label="ステージと素材デザイン">
+      <div class="pow-assets-layout">
+        <div>
+          <img src="../assets/POWSketch.png" alt="" class="pow-image pow-image--sketch">
+          <div class="pow-text">
+            <p>ステージのデザインは、パズルでできた不思議な世界なのでファンシー×不思議をコンセプトに、黒や白の使用を極力避けながら世界を組み立てました。</p>
+          </div>
+        </div>
+        <img src="../assets/POWAssets.png" alt="" class="pow-image pow-image--assets">
+      </div>
+    </section>
+
+    <section class="pow-section pow-section--logo" aria-label="ロゴデザイン">
+      <div class="pow-logo-layout">
+        <img src="../assets/POWLogo.png" alt="" class="pow-image pow-image--logo">
+      </div>
+      <div class="pow-text">
+        <p>ラフは3パターン作成しました。候補はパズルらしさを全面的に押し出し、最終的に二つの良いところを取り入れたロゴに決定しました。</p>
+      </div>
+    </section>
   </main>
   <script src="../load-header.js"></script>
 </body>
