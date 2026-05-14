@@ -686,6 +686,11 @@ a {
   width: auto;
   display: block;
 }
+
+.menu-toggle {
+  display: none;
+}
+
 .hero,
 .section,
 .panel,
@@ -2888,18 +2893,88 @@ a {
       }
 
       .header-inner {
-        padding: 0 8px 8px;
+        position: relative;
+        padding: 0 14px 8px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
       }
 
       .logo {
         font-size: 1.55rem;
       }
 
-.nav {
-  font-size: 0.92rem;
-  gap: 10px 14px;
-  flex-wrap: wrap;
-}
+      .logo-img {
+        height: 42px;
+      }
+
+      .menu-toggle {
+        width: 44px;
+        height: 44px;
+        border: 0;
+        background: transparent;
+        padding: 10px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        width: 26px;
+        height: 3px;
+        border-radius: 999px;
+        background: var(--line);
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .site-header.is-menu-open .menu-toggle span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+
+      .site-header.is-menu-open .menu-toggle span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .site-header.is-menu-open .menu-toggle span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+
+      .nav {
+        position: absolute;
+        top: calc(100% + 3px);
+        right: 0;
+        left: 0;
+        width: 100%;
+        padding: 18px 16px 20px;
+        border-bottom: 3px dashed var(--line);
+        background: var(--bg);
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 16px;
+        font-size: 1rem;
+        z-index: 10;
+      }
+
+      .site-header.is-menu-open .nav {
+        display: flex;
+      }
+
+      .nav-switch {
+        transform: none;
+      }
+
+      .nav-switch:first-of-type {
+        margin-right: 0;
+      }
+
+      .sns-icon {
+        display: none;
+      }
 
       .section-title {
         min-width: 148px;

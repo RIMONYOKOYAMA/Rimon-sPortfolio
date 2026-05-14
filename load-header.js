@@ -26,6 +26,36 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
+    const siteHeader = headerTarget.querySelector(".site-header");
+    const menuToggle = headerTarget.querySelector(".menu-toggle");
+    const nav = headerTarget.querySelector(".nav");
+
+    if (siteHeader && menuToggle && nav) {
+      const closeMenu = () => {
+        siteHeader.classList.remove("is-menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "メニューを開く");
+      };
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = siteHeader.classList.toggle("is-menu-open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 640) closeMenu();
+      });
+    }
+
   } catch (error) {
     console.error("ヘッダーの読み込みに失敗しました", error);
   }
