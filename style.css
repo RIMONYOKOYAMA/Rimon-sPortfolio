@@ -33,6 +33,13 @@
       box-sizing: border-box;
     }
 
+    img,
+    video {
+      -webkit-touch-callout: none;
+      -webkit-user-drag: none;
+      user-select: none;
+    }
+
     html {
       scroll-behavior: smooth;
     }
@@ -3135,7 +3142,15 @@ a {
 
       .works-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 26px 12px;
+        gap: 12px 12px;
+      }
+
+      #works .works-grid .work-meta {
+        font-size: 0.7rem;
+      }
+
+      #works .works-grid .work-title {
+        font-size: 0.88rem;
       }
 
       .works-filter {
@@ -3197,9 +3212,12 @@ a {
         font-size: 2.1rem;
       }
 
-      .tags,
-      .tools-grid {
+      .tags {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .contact-list li {

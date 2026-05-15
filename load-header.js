@@ -3,6 +3,23 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!headerTarget) return;
   const isInSubfolder = location.pathname.includes('/works/');
   const prefix = isInSubfolder ? '../' : '';
+
+  const protectMedia = () => {
+    document.querySelectorAll("img, video").forEach((media) => {
+      media.setAttribute("draggable", "false");
+      media.addEventListener("contextmenu", (event) => event.preventDefault());
+      media.addEventListener("dragstart", (event) => event.preventDefault());
+    });
+  };
+
+  document.addEventListener("contextmenu", (event) => {
+    if (event.target.closest("img, video")) event.preventDefault();
+  });
+
+  document.addEventListener("dragstart", (event) => {
+    if (event.target.closest("img, video")) event.preventDefault();
+  });
+
   try {
     const response = await fetch(prefix + 'header.html');
     const html = await response.text();
@@ -113,4 +130,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       main.insertAdjacentElement("beforeend", nav);
     }
   }
+
+  protectMedia();
 });
